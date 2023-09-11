@@ -1,0 +1,18 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Git Checkout') {
+            steps {
+                checkout checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/amberroutella/Devops_practice.git']] )
+            }
+        }
+
+        stage('Build app') {
+            steps {
+                // Use a specific Maven installation if configured in Jenkins
+                sh 'mvn clean install'
+            }
+        }
+    }
+}
