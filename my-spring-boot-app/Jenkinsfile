@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Git Checkout') {
             steps {
-                checkout checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/amberroutella/Devops_practice.git']] )
+                checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/amberroutella/Devops_practice.git']] )
             }
         }
 
