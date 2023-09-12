@@ -17,5 +17,14 @@ pipeline {
                 '''
             }
         }
+        
+        stage('Testing Jar') {
+            steps {
+                sh  '''
+                cd my-spring-boot-app/
+                java -jar target/*.jar test
+                '''
+            }
+        }
     }
 }
