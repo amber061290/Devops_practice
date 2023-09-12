@@ -22,7 +22,7 @@ pipeline {
             steps {
                 sh  '''
                 cd my-spring-boot-app/
-                java -jar target/*.jar test
+                java -jar target/*.jar test --server.port=8081
                 '''
             }
         }
