@@ -11,7 +11,10 @@ pipeline {
         stage('Build app') {
             steps {
                 // Use a specific Maven installation if configured in Jenkins
-                sh 'my-spring-boot-app/mvn clean install'
+                sh '''
+                    cd my-spring-boot-app/
+                    mvn clean install
+                '''
             }
         }
     }
