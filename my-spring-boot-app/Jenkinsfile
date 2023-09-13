@@ -3,7 +3,7 @@ pipeline {
 
     options {
             skipDefaultCheckout()
-            timeout(time: 2 , unit: 'MINUTES')
+       //   timeout(time: 2 , unit: 'MINUTES')
         }
     stages {
         stage('Git Checkout') {
