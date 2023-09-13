@@ -24,7 +24,7 @@ pipeline {
         
         stage('Testing Jar') {
             when {
-                branch 'main'
+                branch 'dev'
             }
             steps {
                 sh  '''
