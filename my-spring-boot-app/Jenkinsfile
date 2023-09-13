@@ -2,7 +2,8 @@ pipeline {
     agent any
 
     options {
-            skipDefaultCheckout()
+            skipDefaultCheckout(),
+            timeout(time: 2 , unit: 'MINUTES')
         }
     stages {
         stage('Git Checkout') {
