@@ -2,13 +2,13 @@ pipeline {
     agent any
 
     stages{
-        stage("Checkout"){
+        stage('Checkout'){
             steps {
                 checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/amberroutella/Devops_practice.git']] )
             }
         }
 
-        stage("Validating terraform"){
+        stage('Validating terraform'){
             steps {  
                 terraform init
                 terraform validate
