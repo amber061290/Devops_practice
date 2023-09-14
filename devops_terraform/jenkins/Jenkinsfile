@@ -1,0 +1,26 @@
+pipline {
+    agent any
+
+    stages{
+        stage("Checkout"){
+            steps {
+                checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/amberroutella/Devops_practice.git']] )
+            }
+        }
+
+        stage("Validating terraform")
+            steps {  
+                terraform validate
+            }
+
+        stage("Applying terraform")
+            steps{
+
+            }
+        
+        stage("Deploy to S3")
+            steps{
+                sh 'aws s3 sync website/ s3://your-unique-bucket-name/'
+            }        
+    }
+}
