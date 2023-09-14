@@ -10,7 +10,7 @@ pipeline {
 
         stage('Validating terraform'){
             steps {
-                dir("Terraform"){  
+                dir("${env.WORKSPACE}/devops_terraform/Terraform"){  
                     sh  'terraform init'
                     sh  'terraform validate'
                 }
