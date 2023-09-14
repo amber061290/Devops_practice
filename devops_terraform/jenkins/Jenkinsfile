@@ -10,6 +10,7 @@ pipeline {
 
         stage("Validating terraform"){
             steps {  
+                terraform init
                 terraform validate
             }
         }    
