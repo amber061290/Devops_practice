@@ -9,9 +9,11 @@ pipeline {
         }
 
         stage('Validating terraform'){
-            steps {  
-               sh  'terraform init'
-               sh  'terraform validate'
+            steps {
+                dir("Terraform"){  
+                    sh  'terraform init'
+                    sh  'terraform validate'
+                }
             }
         }    
 
