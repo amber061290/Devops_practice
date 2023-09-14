@@ -8,12 +8,12 @@ pipeline {
             }
         }
 
-        stage('Validating terraform'){
-            steps {  
-                terraform init
-                terraform validate
-            }
-        }    
+        // stage('Validating terraform'){
+        //     steps {  
+        //         terraform init
+        //         terraform validate
+        //     }
+        // }    
 
         // stage("Applying terraform"){
         //     steps{
