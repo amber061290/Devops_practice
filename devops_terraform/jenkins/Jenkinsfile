@@ -8,19 +8,22 @@ pipeline {
             }
         }
 
-        stage("Validating terraform")
+        stage("Validating terraform"){
             steps {  
                 terraform validate
             }
+        }    
 
-        stage("Applying terraform")
+        stage("Applying terraform"){
             steps{
 
             }
+        }    
         
-        stage("Deploy to S3")
+        stage("Deploy to S3"){
             steps{
                 sh 'aws s3 sync website/ s3://your-unique-bucket-name/'
-            }        
+            }
+        }            
     }
 }
