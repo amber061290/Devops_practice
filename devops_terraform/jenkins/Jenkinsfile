@@ -10,8 +10,8 @@ pipeline {
 
         stage('Validating terraform'){
             steps {  
-                terraform init
-               // terraform validate
+               sh  'terraform init'
+               sh  'terraform validate'
             }
         }    
 
