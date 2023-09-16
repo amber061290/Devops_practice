@@ -19,13 +19,17 @@ pipeline {
 
         stage("Applying terraform"){
             steps{
+                dir("${env.WORKSPACE}/devops_terraform/Terraform"){
                 sh 'terraform apply -auto-approve'
+                }
             }
         }    
         
         stage("Deploy to S3"){
             steps{
+                dir("${env.WORKSPACE}/devops_terraform/"){
                 sh 'aws s3 sync website/ s3://your-unique-bucket-name/'
+                }
             }
         }            
     }
