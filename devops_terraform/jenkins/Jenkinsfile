@@ -17,16 +17,16 @@ pipeline {
             }
         }    
 
-        // stage("Applying terraform"){
-        //     steps{
-
-        //     }
-        // }    
+        stage("Applying terraform"){
+            steps{
+                sh 'terraform apply -auto-approve'
+            }
+        }    
         
-        // stage("Deploy to S3"){
-        //     steps{
-        //         sh 'aws s3 sync website/ s3://your-unique-bucket-name/'
-        //     }
-        // }            
+        stage("Deploy to S3"){
+            steps{
+                sh 'aws s3 sync website/ s3://your-unique-bucket-name/'
+            }
+        }            
     }
 }
