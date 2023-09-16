@@ -2,8 +2,12 @@ provider "aws" {
   region = "ap-south-1" # Use your preferred region
 }
 
-resource "aws_s3_bucket_website_configuration" "devops_bucket" {
-  bucket = "var.bucket_name"
+resource "aws_s3_bucket" "new_bucket" {
+  bucket = "my-tf-test-bucket"
+}
+
+resource "aws_s3_bucket_website_configuration" "hosting_to_bucket" {
+  bucket = "my-tf-test-bucket"
   
  index_document {
     suffix = "index.html"
