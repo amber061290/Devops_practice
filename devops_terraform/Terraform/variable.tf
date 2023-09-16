@@ -1,7 +1,7 @@
 variable "region" {
   description = "AWS region"
   type        = string
-  default     = "us-west-2" # Set your preferred default region
+  default     = "ap-south-1" # Set your preferred default region
 }
 
 variable "bucket_name" {

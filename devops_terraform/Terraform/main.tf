@@ -1,5 +1,5 @@
 provider "aws" {
-  region = "var.region" # Use your preferred region
+  region = "ap-south-1" # Use your preferred region
 }
 
 resource "aws_s3_bucket_website_configuration" "devops_bucket" {
