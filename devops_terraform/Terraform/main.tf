@@ -1,9 +1,9 @@
 provider "aws" {
-  region = "us-west-2" # Use your preferred region
+  region = "us-west-1" # Use your preferred region
 }
 
 resource "aws_s3_bucket" "new_bucket" {
-  bucket = "new-bucket-devops"
+  bucket = "newbucketforgjsdhgjsdhgjfdh"
 
     tags = {
     Name        = "My bucket"
