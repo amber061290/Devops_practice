@@ -28,7 +28,7 @@ pipeline {
         stage("Deploy to S3"){
             steps{
                 dir("${env.WORKSPACE}/devops_terraform/"){
-                sh 'aws s3 sync website/ s3://your-unique-bucket-name/'
+                sh 'aws s3 sync website/ s3://devops-new1bucket1-practice/'
                 }
             }
         }            
