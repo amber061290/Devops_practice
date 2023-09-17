@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 resource "aws_s3_bucket" "new_bucket" {
-  bucket = "new_bucket_1"
+  bucket = "new-bucket-devops"
 
     tags = {
     Name        = "My bucket"
