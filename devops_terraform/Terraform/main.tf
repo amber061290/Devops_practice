@@ -12,8 +12,10 @@ resource "aws_s3_bucket" "new_bucket" {
 }
 
 resource "aws_s3_bucket_website_configuration" "hosting_to_bucket" {
-  bucket = "aws_s3_bucket.new_bucket.id"
-  
+  import {
+  to = aws_s3_bucket.new_bucket
+  id = "aws_s3_bucket.new_bucket.id"
+}
  index_document {
     suffix = "index.html"
   }
