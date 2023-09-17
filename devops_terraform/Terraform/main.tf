@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 resource "aws_s3_bucket" "new_bucket" {
-  bucket = "my-tf-test-bucket"
+  bucket = "first-s3-bucket"
 }
 
 resource "aws_s3_bucket_website_configuration" "hosting_to_bucket" {
