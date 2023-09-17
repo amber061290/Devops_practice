@@ -11,10 +11,10 @@ resource "aws_s3_bucket" "new_bucket" {
   }
 }
 
-# resource "aws_s3_bucket_website_configuration" "hosting_to_bucket" {
-#   bucket = "first-s3-bucket"
+resource "aws_s3_bucket_website_configuration" "hosting_to_bucket" {
+  bucket = "first-s3-bucket"
   
-#  index_document {
-#     suffix = "index.html"
-#   }
-# }
+ index_document {
+    suffix = "index.html"
+  }
+}
