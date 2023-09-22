@@ -1,9 +1,5 @@
 pipeline {
     agent any
-    environment {
-        TERRAFORM_HOME = tool name: 'terraform 1.5.7', type: 'org.jenkinsci.plugins.terraform.TerraformInstallation'
-        PATH = "${TERRAFORM_HOME}/bin:${env.PATH}"
-    }
 
     stages{
         stage('Checkout'){
